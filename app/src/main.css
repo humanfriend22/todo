@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-y: hidden;
+}
+
+#todo-list > li {
+  @apply no-underline hover:line-through;
+  transition: 8s;
+}
+
+#completed-todo-list > li {
+  @apply line-through hover:text-green-500;
+  transition: color 400ms;
+}
+
+form > input {
+  border-radius: 0.3rem !important;
+}
+
+.btn-sm {
+  height: 0.75rem !important;
+}
+
+.icon {
+  background-color: transparent !important;
+  border: none;
+  padding: 0;
+}
+
+svg {
+  @apply cursor-pointer;
+}
