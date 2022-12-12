@@ -148,6 +148,7 @@ onAuthStateChanged(auth, async user => {
     if (user) {
         await download();
         authButton.parentElement!.dataset.tip = 'Log out';
+        authButton.dataset.ariaLabel = 'Log out';
     }
 
     authButton.querySelector('svg:not(.hidden)')?.classList.add('hidden');

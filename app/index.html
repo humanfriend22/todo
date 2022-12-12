@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple todo app by @humanfriend22">
   <title>Todo</title>
 </head>
 
@@ -20,7 +21,8 @@
       <div class="divider"></div>
       <ul id="completed-todo-list" class="px-3 list-disc cursor-pointer"></ul>
       <div class="w-full h-10">
-        <button class="btn btn-ghost icon float-right text-red-500" id="empty-completed-button">
+        <button class="btn btn-ghost icon float-right text-red-500" id="empty-completed-button"
+          aria-label="Empty completed tasks">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-6 h-6 text-red-500">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -32,12 +34,12 @@
 
     <a class="icon btn btn-square btn-ghost align-text-bottom ml-4 mb-4 font-bold absolute left-0 bottom-0 p-1"
       href="https://www.buymeacoffee.com/humanfriend22" target="_blank">
-      <img src="/bmc-logo-edited.png" class="w-10 h-10">
+      <img src="/bmc-logo-64x64.png" width="30" height="30" alt="Buy Me A Coffee!">
     </a>
 
     <div class="tooltip tooltip-left align-text-bottom mr-4 mb-4 font-bold absolute right-0 bottom-0"
       data-tip="Sync your list in Cloud">
-      <button id="auth-button" class="btn btn-square btn-ghost icon">
+      <button id="auth-button" class="btn btn-square btn-ghost icon" aria-label="Login">
 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-6 h-6 hidden">
