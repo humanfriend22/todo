@@ -6,6 +6,10 @@ body {
   overflow-y: hidden;
 }
 
+#app {
+  max-width: 45%;
+}
+
 #todo-list > li {
   @apply no-underline hover:line-through;
   transition: 8s;
@@ -32,4 +36,10 @@ form > input {
 
 svg {
   @apply cursor-pointer;
+}
+
+@media (min-width: 640px) {
+    main {
+        width: 97% !important;
+    }
 }

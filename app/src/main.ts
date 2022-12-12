@@ -45,6 +45,13 @@ const updateDOM = () => {
         todoList.appendChild(li);
     };
 
+    const hideDivider = data.completedTasks.length === 0;
+
+    console.log(hideDivider, data.tasks.length, data.completedTasks.length);
+
+    document.querySelector<HTMLElement>('.divider')!.style.display = hideDivider ? 'none' : '';
+
+
     for (const completedTask of data.completedTasks) {
         const li = document.createElement('li');
         li.innerText = completedTask;
