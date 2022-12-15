@@ -156,6 +156,8 @@ onAuthStateChanged(auth, async user => {
         const stored = JSON.parse(window.localStorage.getItem('tasks') || 'this shall throw');
 
         if (Array.isArray(stored.tasks) && Array.isArray(stored.completedTasks)) data = stored;
+
+        updateDOM();
     } catch (err) { }
 
     if (user) {
