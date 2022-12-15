@@ -20,7 +20,6 @@
     "removeComments": true
   },
   "include": [
-    "src",
-    "types/main.d.ts"
+    "src"
   ]
 }
