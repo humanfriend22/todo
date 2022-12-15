@@ -1,6 +1,3 @@
-// Types
-import type { Data } from '../types/main';
-
 import './main.css';
 
 import { initializeApp } from 'firebase/app';
@@ -21,6 +18,13 @@ const app = initializeApp({
 
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+// Custom Models
+interface Data {
+    tasks: string[];
+    completedTasks: string[];
+    [k: string]: string[];
+}
 
 // Variables
 const authButton = document.getElementById('auth-button')!;
@@ -48,7 +52,6 @@ const updateDOM = () => {
     const hideDivider = data.completedTasks.length === 0;
 
     document.querySelector<HTMLElement>('.divider')!.style.display = hideDivider ? 'none' : '';
-
 
     for (const completedTask of data.completedTasks) {
         const li = document.createElement('li');
