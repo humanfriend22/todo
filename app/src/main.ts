@@ -47,8 +47,6 @@ const updateDOM = () => {
 
     const hideDivider = data.completedTasks.length === 0;
 
-    console.log(hideDivider, data.tasks.length, data.completedTasks.length);
-
     document.querySelector<HTMLElement>('.divider')!.style.display = hideDivider ? 'none' : '';
 
 
