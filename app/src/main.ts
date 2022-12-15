@@ -152,6 +152,12 @@ authButton.addEventListener('click', async () => {
 
 // Auth
 onAuthStateChanged(auth, async user => {
+    try {
+        const stored = JSON.parse(window.localStorage.getItem('tasks') || 'this shall throw');
+
+        if (Array.isArray(stored.tasks) && Array.isArray(stored.completedTasks)) data = stored;
+    } catch (err) { }
+
     if (user) {
         await download();
         authButton.parentElement!.dataset.tip = 'Log out';
